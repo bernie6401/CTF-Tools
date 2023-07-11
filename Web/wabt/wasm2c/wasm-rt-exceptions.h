@@ -19,10 +19,6 @@
 
 #include "wasm-rt.h"
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 /**
  * A tag is represented as an arbitrary pointer.
  */
@@ -69,9 +65,5 @@ uint32_t wasm_rt_exception_size(void);
  * Contents of the active exception.
  */
 void* wasm_rt_exception(void);
-
-#ifdef __cplusplus
-}
-#endif
 
 #endif

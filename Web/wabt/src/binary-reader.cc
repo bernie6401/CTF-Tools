@@ -598,7 +598,7 @@ Result BinaryReader::ReadMemory(Limits* out_page_limits) {
            "memory may not be shared: threads not allowed");
   ERROR_IF(is_64 && !options_.features.memory64_enabled(),
            "memory64 not allowed");
-  if (options_.features.memory64_enabled()) {
+  if (is_64) {
     CHECK_RESULT(ReadU64Leb128(&initial, "memory initial page count"));
     if (has_max) {
       CHECK_RESULT(ReadU64Leb128(&max, "memory max page count"));

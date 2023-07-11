@@ -145,7 +145,7 @@ inline bool FreeList<Ref>::IsUsed(Index index) const {
 }
 
 template <>
-inline FreeList<Ref>::~FreeList() {}
+inline FreeList<Ref>::~FreeList<Ref>() {}
 
 template <>
 template <typename... Args>
@@ -181,7 +181,7 @@ bool FreeList<T>::IsUsed(Index index) const {
 }
 
 template <typename T>
-FreeList<T>::~FreeList() {
+FreeList<T>::~FreeList<T>() {
   for (auto object : list_) {
     if ((reinterpret_cast<uintptr_t>(object) & ptrFreeBit) == 0) {
       delete object;
