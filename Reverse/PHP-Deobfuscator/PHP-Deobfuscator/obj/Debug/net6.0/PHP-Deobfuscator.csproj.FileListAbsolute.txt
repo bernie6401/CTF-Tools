@@ -1,0 +1,15 @@
+D:\Software\CTF\Reverse\PHP-Deobfuscator\PHP-Deobfuscator\bin\Debug\net6.0\PHP-Deobfuscator.exe
+D:\Software\CTF\Reverse\PHP-Deobfuscator\PHP-Deobfuscator\bin\Debug\net6.0\PHP-Deobfuscator.deps.json
+D:\Software\CTF\Reverse\PHP-Deobfuscator\PHP-Deobfuscator\bin\Debug\net6.0\PHP-Deobfuscator.runtimeconfig.json
+D:\Software\CTF\Reverse\PHP-Deobfuscator\PHP-Deobfuscator\bin\Debug\net6.0\PHP-Deobfuscator.dll
+D:\Software\CTF\Reverse\PHP-Deobfuscator\PHP-Deobfuscator\bin\Debug\net6.0\PHP-Deobfuscator.pdb
+D:\Software\CTF\Reverse\PHP-Deobfuscator\PHP-Deobfuscator\obj\Debug\net6.0\PHP-Deobfuscator.csproj.AssemblyReference.cache
+D:\Software\CTF\Reverse\PHP-Deobfuscator\PHP-Deobfuscator\obj\Debug\net6.0\PHP-Deobfuscator.GeneratedMSBuildEditorConfig.editorconfig
+D:\Software\CTF\Reverse\PHP-Deobfuscator\PHP-Deobfuscator\obj\Debug\net6.0\PHP-Deobfuscator.AssemblyInfoInputs.cache
+D:\Software\CTF\Reverse\PHP-Deobfuscator\PHP-Deobfuscator\obj\Debug\net6.0\PHP-Deobfuscator.AssemblyInfo.cs
+D:\Software\CTF\Reverse\PHP-Deobfuscator\PHP-Deobfuscator\obj\Debug\net6.0\PHP-Deobfuscator.csproj.CoreCompileInputs.cache
+D:\Software\CTF\Reverse\PHP-Deobfuscator\PHP-Deobfuscator\obj\Debug\net6.0\PHP-Deobfuscator.dll
+D:\Software\CTF\Reverse\PHP-Deobfuscator\PHP-Deobfuscator\obj\Debug\net6.0\refint\PHP-Deobfuscator.dll
+D:\Software\CTF\Reverse\PHP-Deobfuscator\PHP-Deobfuscator\obj\Debug\net6.0\PHP-Deobfuscator.pdb
+D:\Software\CTF\Reverse\PHP-Deobfuscator\PHP-Deobfuscator\obj\Debug\net6.0\PHP-Deobfuscator.genruntimeconfig.cache
+D:\Software\CTF\Reverse\PHP-Deobfuscator\PHP-Deobfuscator\obj\Debug\net6.0\ref\PHP-Deobfuscator.dll
