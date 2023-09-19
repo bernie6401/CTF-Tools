@@ -1,6 +1,6 @@
 sudo apt update;
 sudo apt upgrade -y;
-sudo apt install curl zsh gawk git vim gcc make binutils -y;
+sudo apt install curl zsh gawk git vim gcc make binutils npm -y;
 chsh -s /bin/zsh;
 curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh;
 echo "
@@ -84,3 +84,5 @@ alias ll="ls -al"
 alias gccc="gcc -Wl,--dynamic-linker=/usr/src/glibc/glibc_dbg/elf/ld.so -g"
 ' >> ~/.zshrc
 source ~/.zshrc
+
+sudo npm install -g tldr
