@@ -32,15 +32,35 @@ zplug load
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 " >> ~/.zshrc;
 wget -O ~/.gdbinit-gef.py -q https://gef.blah.cat/py;
-echo source ~/.gdbinit-gef.py >> ~/.gdbinit
+git clone https://github.com/longld/peda.git ~/peda
+git clone https://github.com/scwuaptx/Pwngdb.git ~/Pwngdb
 sudo apt install gdb -y;
 echo '
-# gef setting
-gef config dereference.max_recursion 2
-gef config context.layout "regs code args source memory stack trace"
-gef config context.nb_lines_backtrace 3
-gef config context.redirect /dev/pts/1
-' >> ~/.gdbinit
+set disassembly-flavor intel
+
+define gef
+        source ~/.gdbinit-gef.py
+
+        #### gef
+        # gef setting
+        gef config dereference.max_recursion 2
+        gef config context.layout "regs code args source memory stack trace"
+        gef config context.nb_lines_backtrace 3
+        gef config context.redirect /dev/pts/2
+end
+
+define peda
+        source ~/peda/peda.py
+        source ~/Pwngdb/pwngdb.py
+        source ~/Pwngdb/angelheap/gdbinit.py
+
+        define hook-run
+        python
+import angelheap
+angelheap.init_angelheap()
+end
+        end
+end' >> ~/.gdbinit
 
 echo '
 # >>> conda initialize >>>
