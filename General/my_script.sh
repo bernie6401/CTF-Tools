@@ -62,6 +62,10 @@ end
         end
 end' >> ~/.gdbinit
 
+sudo npm install -g tldr
+# For CTF
+sudo apt install  nmap steghide -y;
+
 echo '
 # >>> conda initialize >>>
 # !! Contents within this block are managed by "conda init" !!
@@ -82,7 +86,8 @@ source ~/anaconda3/bin/activate CTF
 cd /mnt/d/NTU/CTF/PicoCTF/
 alias ll="ls -al"
 alias gccc="gcc -Wl,--dynamic-linker=/usr/src/glibc/glibc_dbg/elf/ld.so -g"
+alias cdctf="cd /mnt/d/NTU/CTF/"
+alias cdcs="cd /mnt/d/NTU/Second\ Year/Computer\ Security"
+alias cdtool="cd /mnt/d/Software/CTF/"
 ' >> ~/.zshrc
 source ~/.zshrc
-
-sudo npm install -g tldr
