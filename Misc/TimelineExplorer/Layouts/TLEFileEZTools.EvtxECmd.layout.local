@@ -105,7 +105,7 @@
       <property name="Name">colProvider</property>
       <property name="VisibleIndex">7</property>
       <property name="Visible">true</property>
-      <property name="Width">331</property>
+      <property name="Width">329</property>
       <property name="MinWidth">23</property>
       <property name="MaxWidth">0</property>
     </property>
@@ -135,13 +135,13 @@
       <property name="Name">colComputer</property>
       <property name="VisibleIndex">10</property>
       <property name="Visible">true</property>
-      <property name="Width">104</property>
+      <property name="Width">273</property>
       <property name="MinWidth">23</property>
       <property name="MaxWidth">0</property>
     </property>
     <property name="Item11" isnull="true" iskey="true">
       <property name="Name">colUserId</property>
-      <property name="VisibleIndex">11</property>
+      <property name="VisibleIndex">14</property>
       <property name="Visible">true</property>
       <property name="Width">99</property>
       <property name="MinWidth">23</property>
@@ -149,39 +149,39 @@
     </property>
     <property name="Item12" isnull="true" iskey="true">
       <property name="Name">colMapDescription</property>
-      <property name="VisibleIndex">12</property>
+      <property name="VisibleIndex">15</property>
       <property name="Visible">true</property>
-      <property name="Width">201</property>
+      <property name="Width">146</property>
       <property name="MinWidth">23</property>
       <property name="MaxWidth">0</property>
     </property>
     <property name="Item13" isnull="true" iskey="true">
       <property name="Name">colUserName</property>
-      <property name="VisibleIndex">13</property>
+      <property name="VisibleIndex">16</property>
       <property name="Visible">true</property>
-      <property name="Width">518</property>
+      <property name="Width">95</property>
       <property name="MinWidth">23</property>
       <property name="MaxWidth">0</property>
     </property>
     <property name="Item14" isnull="true" iskey="true">
       <property name="Name">colRemoteHost</property>
-      <property name="VisibleIndex">14</property>
+      <property name="VisibleIndex">17</property>
       <property name="Visible">true</property>
-      <property name="Width">198</property>
+      <property name="Width">108</property>
       <property name="MinWidth">23</property>
       <property name="MaxWidth">0</property>
     </property>
     <property name="Item15" isnull="true" iskey="true">
       <property name="Name">colPayloadData1</property>
-      <property name="VisibleIndex">15</property>
+      <property name="VisibleIndex">18</property>
       <property name="Visible">true</property>
-      <property name="Width">557</property>
+      <property name="Width">127</property>
       <property name="MinWidth">23</property>
       <property name="MaxWidth">0</property>
     </property>
     <property name="Item16" isnull="true" iskey="true">
       <property name="Name">colPayloadData2</property>
-      <property name="VisibleIndex">16</property>
+      <property name="VisibleIndex">19</property>
       <property name="Visible">true</property>
       <property name="Width">133</property>
       <property name="MinWidth">23</property>
@@ -189,7 +189,7 @@
     </property>
     <property name="Item17" isnull="true" iskey="true">
       <property name="Name">colPayloadData3</property>
-      <property name="VisibleIndex">17</property>
+      <property name="VisibleIndex">20</property>
       <property name="Visible">true</property>
       <property name="Width">161</property>
       <property name="MinWidth">23</property>
@@ -197,7 +197,7 @@
     </property>
     <property name="Item18" isnull="true" iskey="true">
       <property name="Name">colPayloadData4</property>
-      <property name="VisibleIndex">18</property>
+      <property name="VisibleIndex">21</property>
       <property name="Visible">true</property>
       <property name="Width">336</property>
       <property name="MinWidth">23</property>
@@ -205,7 +205,7 @@
     </property>
     <property name="Item19" isnull="true" iskey="true">
       <property name="Name">colPayloadData5</property>
-      <property name="VisibleIndex">19</property>
+      <property name="VisibleIndex">22</property>
       <property name="Visible">true</property>
       <property name="Width">233</property>
       <property name="MinWidth">23</property>
@@ -213,7 +213,7 @@
     </property>
     <property name="Item20" isnull="true" iskey="true">
       <property name="Name">colPayloadData6</property>
-      <property name="VisibleIndex">20</property>
+      <property name="VisibleIndex">23</property>
       <property name="Visible">true</property>
       <property name="Width">169</property>
       <property name="MinWidth">23</property>
@@ -221,7 +221,7 @@
     </property>
     <property name="Item21" isnull="true" iskey="true">
       <property name="Name">colExecutableInfo</property>
-      <property name="VisibleIndex">21</property>
+      <property name="VisibleIndex">24</property>
       <property name="Visible">true</property>
       <property name="Width">310</property>
       <property name="MinWidth">23</property>
@@ -229,7 +229,7 @@
     </property>
     <property name="Item22" isnull="true" iskey="true">
       <property name="Name">colSourceFile</property>
-      <property name="VisibleIndex">22</property>
+      <property name="VisibleIndex">12</property>
       <property name="Visible">true</property>
       <property name="Width">379</property>
       <property name="MinWidth">23</property>
@@ -237,7 +237,7 @@
     </property>
     <property name="Item23" isnull="true" iskey="true">
       <property name="Name">colPayload</property>
-      <property name="VisibleIndex">23</property>
+      <property name="VisibleIndex">13</property>
       <property name="Visible">true</property>
       <property name="Width">4210</property>
       <property name="MinWidth">23</property>
@@ -245,9 +245,9 @@
     </property>
     <property name="Item24" isnull="true" iskey="true">
       <property name="Name">colKeywords</property>
-      <property name="VisibleIndex">24</property>
+      <property name="VisibleIndex">11</property>
       <property name="Visible">true</property>
-      <property name="Width">241</property>
+      <property name="Width">126</property>
       <property name="MinWidth">23</property>
       <property name="MaxWidth">0</property>
     </property>
@@ -293,20 +293,48 @@
       <property name="DisplayFormat"> (Count: {0:N0})</property>
     </property>
   </property>
-  <property name="ActiveFilterString">Contains([Payload], 'Hunter') And Contains([UserName], '4orensics\Hunter (S-1-5-21-2489440558-2754304563-710705792-1001)') And [EventId] = 4672</property>
-  <property name="MRUFiltersInfo" iskey="true" value="2">
+  <property name="ActiveFilterString">[EventId] = 4625</property>
+  <property name="MRUFiltersInfo" iskey="true" value="4">
     <property name="Item1" isnull="true" iskey="true">
       <property name="NonColumnFilter" />
       <property name="ColumnsFilter" iskey="true" value="1">
         <property name="Item1" isnull="true" iskey="true">
           <property name="Type">AutoFilter</property>
+          <property name="FilterString">[EventId] = 4625</property>
+          <property name="DisplayText" />
+          <property name="ColumnName">colEventId</property>
+        </property>
+      </property>
+    </property>
+    <property name="Item2" isnull="true" iskey="true">
+      <property name="NonColumnFilter" />
+      <property name="ColumnsFilter" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true">
+          <property name="Type">Custom</property>
           <property name="FilterString">Contains([Payload], 'Hunter')</property>
           <property name="DisplayText" />
           <property name="ColumnName">colPayload</property>
         </property>
       </property>
     </property>
-    <property name="Item2" isnull="true" iskey="true">
+    <property name="Item3" isnull="true" iskey="true">
+      <property name="NonColumnFilter" />
+      <property name="ColumnsFilter" iskey="true" value="2">
+        <property name="Item1" isnull="true" iskey="true">
+          <property name="Type">Custom</property>
+          <property name="FilterString">Contains([Payload], 'Hunter')</property>
+          <property name="DisplayText" />
+          <property name="ColumnName">colPayload</property>
+        </property>
+        <property name="Item2" isnull="true" iskey="true">
+          <property name="Type">Custom</property>
+          <property name="FilterString">Contains([UserName], '4orensics\Hunter (S-1-5-21-2489440558-2754304563-710705792-1001)')</property>
+          <property name="DisplayText" />
+          <property name="ColumnName">colUserName</property>
+        </property>
+      </property>
+    </property>
+    <property name="Item4" isnull="true" iskey="true">
       <property name="NonColumnFilter" />
       <property name="ColumnsFilter" iskey="true" value="2">
         <property name="Item1" isnull="true" iskey="true">
@@ -327,8 +355,8 @@
   <property name="FormatRules" iskey="true" value="0" />
   <property name="SortInfoState" iskey="true" value="1">
     <property name="Item1" isnull="true" iskey="true">
-      <property name="Orders">Ascending</property>
-      <property name="Columns">colRemoteHost</property>
+      <property name="Orders">Descending</property>
+      <property name="Columns">colMapDescription</property>
     </property>
     <property name="Content" isnull="true" iskey="true">
       <property name="GroupCount">0</property>
