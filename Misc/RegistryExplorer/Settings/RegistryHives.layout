@@ -93,7 +93,7 @@
         <property name="FormatString" />
         <property name="FormatType">None</property>
       </property>
-      <property name="Width">496</property>
+      <property name="Width">320</property>
       <property name="SeparatorWidth">0</property>
       <property name="MinWidth">38</property>
       <property name="MaxWidth">0</property>
