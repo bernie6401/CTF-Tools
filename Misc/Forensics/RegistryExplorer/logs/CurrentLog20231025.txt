@@ -1,0 +1,4 @@
+2023-10-25 02:02:03.159 +08:00 [WRN] Sequence numbers do not match! Hive is dirty and the transaction logs should be reviewed for relevant data!
+2023-10-25 02:02:56.352 +08:00 [WRN] Sequence numbers do not match! Hive is dirty and the transaction logs should be reviewed for relevant data!
+2023-10-25 02:03:15.715 +08:00 [WRN] Sequence numbers do not match! Hive is dirty and the transaction logs should be reviewed for relevant data!
+2023-10-25 13:42:19.285 +08:00 [WRN] Sequence numbers do not match! Hive is dirty and the transaction logs should be reviewed for relevant data!
