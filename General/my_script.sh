@@ -17,13 +17,13 @@ zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 zplug 'zsh-users/zsh-autosuggestions'
 
 if ! zplug check --verbose; then
-	printf 'Install? [y/N]: '
-	if read -q; then
-	
-		echo; zplug install
-	else
-		echo
-	fi
+        printf 'Install? [y/N]: '
+        if read -q; then
+
+                echo; zplug install
+        else
+                echo
+        fi
 fi
 
 zplug load
