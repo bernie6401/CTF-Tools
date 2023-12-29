@@ -90,4 +90,8 @@ alias cdctf="cd /mnt/d/NTU/CTF/"
 alias cdcs="cd /mnt/d/NTU/Second\ Year/Computer\ Security"
 alias cdtool="cd /mnt/d/Software/CTF/"
 ' >> ~/.zshrc
+
+# Install NVM
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
+
 source ~/.zshrc
