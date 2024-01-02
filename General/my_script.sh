@@ -1,6 +1,6 @@
 sudo apt update;
 sudo apt upgrade -y;
-sudo apt install curl zsh gawk git vim gcc make binutils npm -y;
+sudo apt install curl zsh gawk git vim gcc make binutils npm binwalk exiftool -y;
 chsh -s /bin/zsh;
 curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh;
 echo "
