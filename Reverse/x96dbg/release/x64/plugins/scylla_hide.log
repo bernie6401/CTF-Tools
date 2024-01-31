@@ -1,50 +1,28 @@
-2024.01.06 17:58:15 INFO: Loaded VA for NtUserBlockInput = 0x00007FFC516D8980
-2024.01.06 17:58:15 INFO: Loaded VA for NtUserQueryWindow = 0x00007FFC516D1660
-2024.01.06 17:58:15 INFO: Loaded VA for NtUserGetForegroundWindow = 0x00007FFC516D1B80
-2024.01.06 17:58:15 INFO: Loaded VA for NtUserBuildHwndList = 0x00007FFC516D17E0
-2024.01.06 17:58:15 INFO: Loaded VA for NtUserFindWindowEx = 0x00007FFC516D2180
-2024.01.06 17:58:15 INFO: Loaded VA for NtUserGetClassName = 0x00007FFC516D2320
-2024.01.06 17:58:15 INFO: Loaded VA for NtUserInternalGetWindowText = 0x00007FFC516D2040
-2024.01.06 17:58:15 INFO: Loaded VA for NtUserGetThreadState = 0x00007FFC516D14A0
-2024.01.06 17:58:15 DEBUG: ApplyNtdllHook -> _NtSetInformationThread 00007FFC53BEF500 _NtQuerySystemInformation 00007FFC53BEFA20 _NtQueryInformationProcess 00007FFC53BEF680 _NtSetInformationProcess 00007FFC53BEF6E0 _NtQueryObject 00007FFC53BEF560
-2024.01.06 17:58:15 DEBUG: ApplyNtdllHook -> _NtYieldExecution 00007FFC53BEFC20 _NtGetContextThread 00007FFC53BF1270 _NtSetContextThread 00007FFC53BF2650 _KiUserExceptionDispatcher 00007FFC53BF33E0 _NtContinue 00007FFC53BEFBC0
-2024.01.06 17:58:15 DEBUG: ApplyNtdllHook -> _NtClose 00007FFC53BEF540 _NtDuplicateObject 00007FFC53BEFAE0 _NtSetDebugFilterState 00007FFC53BF2670 _NtCreateThread 00007FFC53BEFD20 _NtCreateThreadEx 00007FFC53BF0C30 _NtQuerySystemTime 00007FFC53BEFEA0 _NtQueryPerformanceCounter 00007FFC53BEF980 _NtResumeThread 00007FFC53BEFDA0
-2024.01.06 17:58:15 DEBUG: ApplyNtdllHook -> _NtOpenFile 00007FFC53BEF9C0 _NtCreateSection 00007FFC53BEFCA0 _NtMapViewOfSection 00007FFC53BEF860
-2024.01.06 17:58:15 DEBUG: ApplyNtdllHook -> Hooking NtSetInformationThread
-2024.01.06 17:58:15 DEBUG: ApplyNtdllHook -> Hooking NtQueryInformationProcess
-2024.01.06 17:58:15 DEBUG: ApplyNtdllHook -> Hooking NtQueryObject
-2024.01.06 17:58:15 DEBUG: ApplyNtdllHook -> Hooking NtClose
-2024.01.06 17:58:15 DEBUG: ApplyNtdllHook -> Hooking NtDuplicateObject
-2024.01.06 17:58:15 DEBUG: ApplyNtdllHook -> Hooking NtOpenFile
-2024.01.06 17:58:15 DEBUG: ApplyNtdllHook -> Hooking NtCreateSection
-2024.01.06 17:58:15 DEBUG: ApplyNtdllHook -> Hooking NtMapViewOfSection
-2024.01.06 17:58:15 DEBUG: ApplyKernel32Hook -> Using Kernelbase 00007FFC510A0000 instead of kernel32 00007FFC51C00000
-2024.01.06 17:58:15 DEBUG: ApplyKernel32Hook -> _GetTickCount 00007FFC510F9590 _GetTickCount64 00007FFC511010E0 _GetLocalTime 00007FFC510ECC60 _GetSystemTime 00007FFC5110CB00 _OutputDebugStringA 00007FFC51105290
-2024.01.06 17:58:15 DEBUG: ApplyUserHook -> HookedNtUserBlockInput 000002436FDE216C HookedNtUserFindWindowEx 000002436FDE21C8 HookedNtUserBuildHwndList 000002436FDE2300 HookedNtUserBuildHwndList_Eight 000002436FDE2360 HookedNtUserQueryWindow 000002436FDE23CC HookedNtUserGetForegroundWindow 000002436FDE242C
-2024.01.06 17:58:15 DEBUG: ApplyUserHook -> _NtUserBlockInput 00007FFC516D8980 _NtUserFindWindowEx 00007FFC516D2180 _NtUserBuildHwndList 00007FFC516D17E0 _NtUserQueryWindow 00007FFC516D1660 _NtUserGetForegroundWindow 00007FFC516D1B80
-2024.01.06 17:58:15 INFO: Hook injection successful, image base 000002436FDE0000
-2024.01.06 17:59:53 INFO: Loaded VA for NtUserBlockInput = 0x00007FFC516D8980
-2024.01.06 17:59:53 INFO: Loaded VA for NtUserQueryWindow = 0x00007FFC516D1660
-2024.01.06 17:59:53 INFO: Loaded VA for NtUserGetForegroundWindow = 0x00007FFC516D1B80
-2024.01.06 17:59:53 INFO: Loaded VA for NtUserBuildHwndList = 0x00007FFC516D17E0
-2024.01.06 17:59:53 INFO: Loaded VA for NtUserFindWindowEx = 0x00007FFC516D2180
-2024.01.06 17:59:53 INFO: Loaded VA for NtUserGetClassName = 0x00007FFC516D2320
-2024.01.06 17:59:53 INFO: Loaded VA for NtUserInternalGetWindowText = 0x00007FFC516D2040
-2024.01.06 17:59:53 INFO: Loaded VA for NtUserGetThreadState = 0x00007FFC516D14A0
-2024.01.06 17:59:53 DEBUG: ApplyNtdllHook -> _NtSetInformationThread 00007FFC53BEF500 _NtQuerySystemInformation 00007FFC53BEFA20 _NtQueryInformationProcess 00007FFC53BEF680 _NtSetInformationProcess 00007FFC53BEF6E0 _NtQueryObject 00007FFC53BEF560
-2024.01.06 17:59:53 DEBUG: ApplyNtdllHook -> _NtYieldExecution 00007FFC53BEFC20 _NtGetContextThread 00007FFC53BF1270 _NtSetContextThread 00007FFC53BF2650 _KiUserExceptionDispatcher 00007FFC53BF33E0 _NtContinue 00007FFC53BEFBC0
-2024.01.06 17:59:53 DEBUG: ApplyNtdllHook -> _NtClose 00007FFC53BEF540 _NtDuplicateObject 00007FFC53BEFAE0 _NtSetDebugFilterState 00007FFC53BF2670 _NtCreateThread 00007FFC53BEFD20 _NtCreateThreadEx 00007FFC53BF0C30 _NtQuerySystemTime 00007FFC53BEFEA0 _NtQueryPerformanceCounter 00007FFC53BEF980 _NtResumeThread 00007FFC53BEFDA0
-2024.01.06 17:59:53 DEBUG: ApplyNtdllHook -> _NtOpenFile 00007FFC53BEF9C0 _NtCreateSection 00007FFC53BEFCA0 _NtMapViewOfSection 00007FFC53BEF860
-2024.01.06 17:59:53 DEBUG: ApplyNtdllHook -> Hooking NtSetInformationThread
-2024.01.06 17:59:53 DEBUG: ApplyNtdllHook -> Hooking NtQueryInformationProcess
-2024.01.06 17:59:53 DEBUG: ApplyNtdllHook -> Hooking NtQueryObject
-2024.01.06 17:59:53 DEBUG: ApplyNtdllHook -> Hooking NtClose
-2024.01.06 17:59:53 DEBUG: ApplyNtdllHook -> Hooking NtDuplicateObject
-2024.01.06 17:59:53 DEBUG: ApplyNtdllHook -> Hooking NtOpenFile
-2024.01.06 17:59:53 DEBUG: ApplyNtdllHook -> Hooking NtCreateSection
-2024.01.06 17:59:53 DEBUG: ApplyNtdllHook -> Hooking NtMapViewOfSection
-2024.01.06 17:59:53 DEBUG: ApplyKernel32Hook -> Using Kernelbase 00007FFC510A0000 instead of kernel32 00007FFC51C00000
-2024.01.06 17:59:53 DEBUG: ApplyKernel32Hook -> _GetTickCount 00007FFC510F9590 _GetTickCount64 00007FFC511010E0 _GetLocalTime 00007FFC510ECC60 _GetSystemTime 00007FFC5110CB00 _OutputDebugStringA 00007FFC51105290
-2024.01.06 17:59:53 DEBUG: ApplyUserHook -> HookedNtUserBlockInput 000001CAD648216C HookedNtUserFindWindowEx 000001CAD64821C8 HookedNtUserBuildHwndList 000001CAD6482300 HookedNtUserBuildHwndList_Eight 000001CAD6482360 HookedNtUserQueryWindow 000001CAD64823CC HookedNtUserGetForegroundWindow 000001CAD648242C
-2024.01.06 17:59:53 DEBUG: ApplyUserHook -> _NtUserBlockInput 00007FFC516D8980 _NtUserFindWindowEx 00007FFC516D2180 _NtUserBuildHwndList 00007FFC516D17E0 _NtUserQueryWindow 00007FFC516D1660 _NtUserGetForegroundWindow 00007FFC516D1B80
-2024.01.06 17:59:53 INFO: Hook injection successful, image base 000001CAD6480000
+2024.01.19 22:20:01 INFO: Loaded VA for NtUserBlockInput = 0x00007FFBDA418980
+2024.01.19 22:20:01 INFO: Loaded VA for NtUserQueryWindow = 0x00007FFBDA411660
+2024.01.19 22:20:01 INFO: Loaded VA for NtUserGetForegroundWindow = 0x00007FFBDA411B80
+2024.01.19 22:20:01 INFO: Loaded VA for NtUserBuildHwndList = 0x00007FFBDA4117E0
+2024.01.19 22:20:01 INFO: Loaded VA for NtUserFindWindowEx = 0x00007FFBDA412180
+2024.01.19 22:20:01 INFO: Loaded VA for NtUserGetClassName = 0x00007FFBDA412320
+2024.01.19 22:20:01 INFO: Loaded VA for NtUserInternalGetWindowText = 0x00007FFBDA412040
+2024.01.19 22:20:01 INFO: Loaded VA for NtUserGetThreadState = 0x00007FFBDA4114A0
+2024.01.19 22:20:01 DEBUG: ApplyNtdllHook -> _NtSetInformationThread 00007FFBDD0CF500 _NtQuerySystemInformation 00007FFBDD0CFA20 _NtQueryInformationProcess 00007FFBDD0CF680 _NtSetInformationProcess 00007FFBDD0CF6E0 _NtQueryObject 00007FFBDD0CF560
+2024.01.19 22:20:01 DEBUG: ApplyNtdllHook -> _NtYieldExecution 00007FFBDD0CFC20 _NtGetContextThread 00007FFBDD0D1270 _NtSetContextThread 00007FFBDD0D2650 _KiUserExceptionDispatcher 00007FFBDD0D33E0 _NtContinue 00007FFBDD0CFBC0
+2024.01.19 22:20:01 DEBUG: ApplyNtdllHook -> _NtClose 00007FFBDD0CF540 _NtDuplicateObject 00007FFBDD0CFAE0 _NtSetDebugFilterState 00007FFBDD0D2670 _NtCreateThread 00007FFBDD0CFD20 _NtCreateThreadEx 00007FFBDD0D0C30 _NtQuerySystemTime 00007FFBDD0CFEA0 _NtQueryPerformanceCounter 00007FFBDD0CF980 _NtResumeThread 00007FFBDD0CFDA0
+2024.01.19 22:20:01 DEBUG: ApplyNtdllHook -> _NtOpenFile 00007FFBDD0CF9C0 _NtCreateSection 00007FFBDD0CFCA0 _NtMapViewOfSection 00007FFBDD0CF860
+2024.01.19 22:20:01 DEBUG: ApplyNtdllHook -> Hooking NtSetInformationThread
+2024.01.19 22:20:01 DEBUG: ApplyNtdllHook -> Hooking NtQuerySystemInformation
+2024.01.19 22:20:01 DEBUG: ApplyNtdllHook -> Hooking NtQueryInformationProcess
+2024.01.19 22:20:01 DEBUG: ApplyNtdllHook -> Hooking NtSetInformationProcess
+2024.01.19 22:20:01 DEBUG: ApplyNtdllHook -> Hooking NtQueryObject
+2024.01.19 22:20:01 DEBUG: ApplyNtdllHook -> Hooking NtYieldExecution
+2024.01.19 22:20:01 DEBUG: ApplyNtdllHook -> Hooking NtClose
+2024.01.19 22:20:01 DEBUG: ApplyNtdllHook -> Hooking NtDuplicateObject
+2024.01.19 22:20:01 DEBUG: ApplyNtdllHook -> Hooking NtOpenFile
+2024.01.19 22:20:01 DEBUG: ApplyNtdllHook -> Hooking NtCreateSection
+2024.01.19 22:20:01 DEBUG: ApplyNtdllHook -> Hooking NtMapViewOfSection
+2024.01.19 22:20:01 DEBUG: ApplyKernel32Hook -> Using Kernelbase 00007FFBDA930000 instead of kernel32 00007FFBDCBA0000
+2024.01.19 22:20:01 DEBUG: ApplyKernel32Hook -> _GetTickCount 00007FFBDA989590 _GetTickCount64 00007FFBDA9910E0 _GetLocalTime 00007FFBDA97CC60 _GetSystemTime 00007FFBDA99CB00 _OutputDebugStringA 00007FFBDA995290
+2024.01.19 22:20:01 INFO: Hook injection successful, image base 000002C0A9E10000
+2024.01.19 22:20:50 DEBUG: ApplyUserHook -> HookedNtUserBlockInput 000002C0A9E1216C HookedNtUserFindWindowEx 000002C0A9E121C8 HookedNtUserBuildHwndList 000002C0A9E12300 HookedNtUserBuildHwndList_Eight 000002C0A9E12360 HookedNtUserQueryWindow 000002C0A9E123CC HookedNtUserGetForegroundWindow 000002C0A9E1242C
+2024.01.19 22:20:50 DEBUG: ApplyUserHook -> _NtUserBlockInput 00007FFBDA418980 _NtUserFindWindowEx 00007FFBDA412180 _NtUserBuildHwndList 00007FFBDA4117E0 _NtUserQueryWindow 00007FFBDA411660 _NtUserGetForegroundWindow 00007FFBDA411B80

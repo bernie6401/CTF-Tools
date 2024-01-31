@@ -56,7 +56,7 @@
       <property name="Name">colData</property>
       <property name="VisibleIndex">2</property>
       <property name="Visible">true</property>
-      <property name="Width">308</property>
+      <property name="Width">353</property>
       <property name="MinWidth">23</property>
       <property name="MaxWidth">0</property>
     </property>
@@ -64,7 +64,7 @@
       <property name="Name">colValueName</property>
       <property name="VisibleIndex">0</property>
       <property name="Visible">true</property>
-      <property name="Width">170</property>
+      <property name="Width">184</property>
       <property name="MinWidth">23</property>
       <property name="MaxWidth">0</property>
     </property>
@@ -92,7 +92,7 @@
       <property name="Name">colValueSlack</property>
       <property name="VisibleIndex">3</property>
       <property name="Visible">true</property>
-      <property name="Width">128</property>
+      <property name="Width">251</property>
       <property name="MinWidth">23</property>
       <property name="MaxWidth">0</property>
     </property>
@@ -106,7 +106,7 @@
       <property name="Name">colIsDeleted</property>
       <property name="VisibleIndex">4</property>
       <property name="Visible">true</property>
-      <property name="Width">101</property>
+      <property name="Width">113</property>
       <property name="MinWidth">23</property>
       <property name="MaxWidth">0</property>
     </property>
@@ -114,7 +114,7 @@
       <property name="Name">colDataRecordReallocated</property>
       <property name="VisibleIndex">5</property>
       <property name="Visible">true</property>
-      <property name="Width">356</property>
+      <property name="Width">579</property>
       <property name="MinWidth">23</property>
       <property name="MaxWidth">0</property>
     </property>
