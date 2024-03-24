@@ -72,3 +72,4 @@
     * [Phone](https://www.truecaller.com)
     * [Whois](https://www.whois.com/whois) or [ipwhoisinfo](https://ipwhoisinfo.com/)
     * [Whatsmyname - online tool](https://whatsmyname.app/)
+    * [DNS Lookup(從Domain Name看IP)](https://www.whatismyip.com/dns-lookup/)
