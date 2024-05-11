@@ -1,5 +1,0 @@
-2023-11-03 12:27:32.814 +08:00 [ERR] D:\NTU\CTF\CyberDefenders\Szechuan Sauce\autorunsc-citadel-dc01.csv is not a Registry hive (bad signature)
-2023-11-03 12:29:55.812 +08:00 [WRN] Sequence numbers do not match! Hive is dirty and the transaction logs should be reviewed for relevant data!
-2023-11-03 12:30:25.216 +08:00 [WRN] Sequence numbers do not match! Hive is dirty and the transaction logs should be reviewed for relevant data!
-2023-11-03 12:45:19.933 +08:00 [WRN] Sequence numbers do not match! Hive is dirty and the transaction logs should be reviewed for relevant data!
-2023-11-03 12:45:35.508 +08:00 [WRN] Sequence numbers do not match! Hive is dirty and the transaction logs should be reviewed for relevant data!

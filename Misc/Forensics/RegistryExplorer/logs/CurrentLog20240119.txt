@@ -1,1 +1,0 @@
-2024-01-19 17:18:41.359 +08:00 [ERR] D:\NTU\CTF\TSCCTF 2024\Misc\There Is Nothing Here (2)\Active Directory\ntds.dit is not a Registry hive (bad signature)

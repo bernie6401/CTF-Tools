@@ -1,1 +1,0 @@
-Meow? Here is your <a href="./flag.php">Flag</a>.
