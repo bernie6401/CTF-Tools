@@ -1,1 +1,0 @@
-java -jar D:\Software\CTF\General\ADB-Tools\bundletool-all-1.17.2.jar %*
