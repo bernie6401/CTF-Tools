@@ -1,0 +1,18 @@
+Windows Registry Editor Version 5.00
+
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\AutoRuns]
+@="AutoRuns"
+"Icon"="D:\\CTF-Tools\\Windows\\SysinternalsSuite\\Autoruns64.exe"
+"HasLUAShield"=""
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\AutoRuns\command]
+@="\"D:\\CTF-Tools\\Windows\\SysinternalsSuite\\Autoruns64.exe\""
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\BurpSuite]
+@="BurpSuite"
+"Icon"="D:\\CTF-Tools\\Web\\Burp Suite\\BurpSuite.ico"
+"HasLUAShield"=""
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\BurpSuite\command]
+@="\"D:\\CTF-Tools\\Web\\Burp Suite\\BurpSuite.bat\""
