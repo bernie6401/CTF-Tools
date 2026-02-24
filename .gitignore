@@ -8,5 +8,7 @@ Misc/rockyou.txt
 Misc/wireshark-3.6.11/*
 
 Web/Burp\ Suite/*
+!Web/Burp\ Suite/BurpLoaderKeygen.jar
+!Web/Burp\ Suite/BurpSuite.bat
 
 General/d8
