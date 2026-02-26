@@ -1,0 +1,195 @@
+#!/usr/bin/env bash
+#
+# Author: Denny Huang <denny0223@gmail.com>
+# Wed Sep 17 2014
+# MIT License
+#
+# Description:
+# A script to recursively download git objects from a web server
+# that has an exposed .git directory. It reconstructs the git history locally.
+
+# Exit immediately if a command exits with a non-zero status.
+# Treat unset variables as an error when substituting.
+# Pipelines return the exit status of the last command to exit with a
+# non-zero status, or zero if no command exited with a non-zero status.
+set -o errexit -o nounset -o pipefail
+
+# --- Functions ---
+
+# Prints usage information and exits.
+usage() {
+    echo "Usage: scrabble <url> [directory]" >&2
+    echo "" >&2
+    echo "Arguments:" >&2
+    echo "  url        The full URL to the repository's .git directory." >&2
+    echo "  directory  (Optional) The directory to clone into." >&2
+    echo "             If not provided, it defaults to the repository name from the URL." >&2
+    echo "" >&2
+    echo "Example: scrabble http://example.com/my-project.git/" >&2
+    echo "         scrabble http://example.com/my-project.git/ my-new-folder" >&2
+    exit 1
+}
+
+# Downloads a git object blob from the remote server.
+# Arguments:
+#   $1: The object hash.
+#   $2: The domain URL.
+downloadBlob() {
+    local hash="$1"
+    local domain="$2"
+    local dir="${hash:0:2}"
+    local file="${hash:2}"
+
+    echo "Downloading blob: ${hash}"
+
+    mkdir -p "$dir"
+    # Using a subshell for cd is safer as it doesn't change the CWD of the script.
+    (
+        cd "$dir"
+        wget -q -nc "${domain}/.git/objects/${dir}/${file}"
+    )
+}
+
+# Recursively parses a git tree object.
+# Arguments:
+#   $1: The tree hash.
+#   $2: The domain URL.
+parseTree() {
+    local tree_hash="$1"
+    local domain="$2"
+
+    echo "Parsing tree: ${tree_hash}"
+
+    downloadBlob "$tree_hash" "$domain"
+
+    # Use process substitution and a while-read loop to parse the tree entries.
+    # This is more efficient than multiple awk/sed calls.
+    while read -r _ type hash _; do
+        if [[ "$type" == "tree" ]]; then
+            parseTree "$hash" "$domain"
+        elif [[ "$type" == "blob" ]]; then
+            downloadBlob "$hash" "$domain"
+        fi
+    done < <(git cat-file -p "$tree_hash")
+}
+
+# Recursively parses a git commit object.
+# Arguments:
+#   $1: The commit hash.
+#   $2: The domain URL.
+parseCommit() {
+    local commit_hash="$1"
+    local domain="$2"
+
+    echo "Parsing commit: ${commit_hash}"
+
+    downloadBlob "$commit_hash" "$domain"
+
+    # Extract tree and parent hashes more robustly.
+    local tree
+    tree=$(git cat-file -p "$commit_hash" | awk '/^tree/ {print $2}')
+    parseTree "$tree" "$domain"
+
+    # A commit can have multiple parents (merge commits). We must parse all of them.
+    git cat-file -p "$commit_hash" | awk '/^parent/ {print $2}' | while read -r parent; do
+        if [[ -n "$parent" && "${#parent}" -eq 40 ]]; then
+            # To avoid infinite loops on repositories with circular references (which are possible),
+            # we can add a check here to not re-parse a commit.
+            # For now, we assume a clean history.
+            parseCommit "$parent" "$domain"
+        fi
+    done
+}
+
+# --- Main Logic ---
+
+main() {
+    # Check for required tools
+    for cmd in git curl wget; do
+        if ! command -v "$cmd" &> /dev/null; then
+            echo "Error: Required command '$cmd' not found." >&2
+            exit 1
+        fi
+    done
+
+    # Check for URL argument
+    if [[ $# -eq 0 ]]; then
+        usage
+    fi
+
+    local domain="$1"
+    # Ensure domain ends with a slash
+    if [[ "${domain: -1}" != "/" ]]; then
+        domain+="/"
+    fi
+
+    # Determine the output directory.
+    local output_dir
+    if [[ -n "${2:-}" ]]; then
+        output_dir="$2"
+    else
+        # Default to the basename of the URL, removing .git if present.
+        output_dir=$(basename "${domain}" .git)
+    fi
+
+    # Security check: ensure the target directory does not exist.
+    if [[ -e "$output_dir" ]]; then
+        echo "Error: Target directory '${output_dir}' already exists." >&2
+        echo "Please remove it or choose a different directory." >&2
+        exit 1
+    fi
+
+    echo "Creating target directory: ${output_dir}"
+    mkdir -p "$output_dir"
+    cd "$output_dir"
+
+    echo "Initializing local repository..."
+    git init -q
+
+    # Fetch HEAD to find the current branch reference
+    echo "Fetching remote HEAD..."
+    local ref
+    ref=$(curl -s "${domain}.git/HEAD" | awk '{print $2}')
+    if [[ -z "$ref" ]]; then
+        echo "Error: Could not determine remote HEAD reference." >&2
+        echo "Is the .git directory accessible at ${domain}.git/ ?" >&2
+        exit 1
+    fi
+
+    # Fetch the commit hash from the reference
+    echo "Fetching commit hash for ref: $ref..."
+    local lastHash
+    lastHash=$(curl -s "${domain}.git/${ref}")
+    if ! [[ "$lastHash" =~ ^[0-9a-f]{40}$ ]]; then
+        echo "Error: Could not get a valid commit hash from ${domain}.git/${ref}" >&2
+        exit 1
+    fi
+
+    echo "Starting download with initial commit: $lastHash"
+
+    # Change to objects directory to download files.
+    # Using a subshell is safer as it doesn't change the CWD of the main script.
+    (
+        cd .git/objects/
+        parseCommit "$lastHash" "$domain"
+    )
+
+    echo "Download complete."
+
+    # Set the local branch to point to the downloaded commit.
+    # This uses the ref name from the remote.
+    echo "Updating ref '${ref}' to point to ${lastHash}"
+    echo "$lastHash" > ".git/${ref}"
+
+    # Point HEAD to the just-created ref to make it the current branch.
+    echo "Setting HEAD to point to '${ref}'"
+    git symbolic-ref HEAD "${ref}"
+
+    # Reset the working directory to the state of the downloaded commit.
+    echo "Resetting repository to the downloaded state..."
+    git reset --hard
+    echo "Done. Repository downloaded to '${output_dir}'"
+}
+
+# Execute the main function with all script arguments
+main "$@"
