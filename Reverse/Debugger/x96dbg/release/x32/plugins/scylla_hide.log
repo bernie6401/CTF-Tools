@@ -1,0 +1,23 @@
+2026.03.02 05:58:54 INFO: Loaded VA for NtUserBlockInput = 0x74CB4C40
+2026.03.02 05:58:54 INFO: Loaded VA for NtUserQueryWindow = 0x74CB1230
+2026.03.02 05:58:54 INFO: Loaded VA for NtUserGetForegroundWindow = 0x74CB14C0
+2026.03.02 05:58:54 INFO: Loaded VA for NtUserBuildHwndList = 0x74CB12F0
+2026.03.02 05:58:54 INFO: Loaded VA for NtUserFindWindowEx = 0x74CB17C0
+2026.03.02 05:58:54 INFO: Loaded VA for NtUserGetClassName = 0x74CB1890
+2026.03.02 05:58:54 INFO: Loaded VA for NtUserInternalGetWindowText = 0x74CB1720
+2026.03.02 05:58:54 INFO: Loaded VA for NtUserGetThreadState = 0x74CB1150
+2026.03.02 05:58:54 DEBUG: ApplyNtdllHook -> _NtSetInformationThread 77929240 _NtQuerySystemInformation 779294F0 _NtQueryInformationProcess 77929300 _NtSetInformationProcess 77929350 _NtQueryObject 77929270
+2026.03.02 05:58:54 DEBUG: ApplyNtdllHook -> _NtYieldExecution 779295F0 _NtGetContextThread 7792A140 _NtSetContextThread 7792AB30 _KiUserExceptionDispatcher 7792B7C0 _NtContinue 779295C0
+2026.03.02 05:58:54 DEBUG: ApplyNtdllHook -> _NtClose 77929260 _NtDuplicateObject 77929550 _NtSetDebugFilterState 7792AB40 _NtCreateThread 77929670 _NtCreateThreadEx 77929E20 _NtQuerySystemTime 77929730 _NtQueryPerformanceCounter 779294A0 _NtResumeThread 779296B0
+2026.03.02 05:58:54 DEBUG: ApplyNtdllHook -> _NtOpenFile 779294C0 _NtCreateSection 77929630 _NtMapViewOfSection 77929410
+2026.03.02 05:58:54 DEBUG: ApplyNtdllHook -> Hooking NtSetInformationThread
+2026.03.02 05:58:54 DEBUG: ApplyNtdllHook -> Hooking NtQueryInformationProcess
+2026.03.02 05:58:54 DEBUG: ApplyNtdllHook -> Hooking NtQueryObject
+2026.03.02 05:58:54 DEBUG: ApplyNtdllHook -> Hooking NtClose
+2026.03.02 05:58:54 DEBUG: ApplyNtdllHook -> Hooking NtDuplicateObject
+2026.03.02 05:58:54 DEBUG: ApplyNtdllHook -> Hooking NtOpenFile
+2026.03.02 05:58:54 DEBUG: ApplyNtdllHook -> Hooking NtCreateSection
+2026.03.02 05:58:54 DEBUG: ApplyNtdllHook -> Hooking NtMapViewOfSection
+2026.03.02 05:58:54 DEBUG: ApplyKernel32Hook -> Using Kernelbase 76C50000 instead of kernel32 774A0000
+2026.03.02 05:58:54 DEBUG: ApplyKernel32Hook -> _GetTickCount 76DA5580 _GetTickCount64 76DA6120 _GetLocalTime 76DA5470 _GetSystemTime 76DA6480 _OutputDebugStringA 76E8EBD0
+2026.03.02 05:58:54 INFO: Hook injection successful, image base 01080000
