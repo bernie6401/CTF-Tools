@@ -6,3 +6,11 @@ Misc/FTK Imager/*
 
 Web/Burp\ Suite/burpsuite_pro_v2022.2.2.jar
 Web/Language/d8/d8
+
+Reverse/Disassembler/IDA Pro 7.7/plugins/patching/__pycache__/*
+Reverse/Disassembler/IDA Pro 7.7/plugins/patching/keystone/__pycache__/*
+Reverse/Disassembler/IDA Pro 7.7/plugins/patching/ui/__pycache__/*
+Reverse/Disassembler/IDA Pro 7.7/plugins/patching/util/__pycache__/*
+Reverse/Disassembler/IDA Pro 7.7/plugins/retsync/__pycache__/*
+Reverse/Disassembler/IDA Pro 7.7/python/3/__pycache__/*
+Reverse/Disassembler/IDA Pro 7.7/python/3/PyQt5/__pycache__/*
