@@ -1,0 +1,52 @@
+library teLock98;
+
+uses Windows;
+
+function Resolve(hProcess:DWORD;ImageBase:DWORD;Size:DWORD;RVA:DWORD):DWORD;StdCall;
+var hFile:DWORD;
+    X,IATRVA,hf2:DWORD;
+    MBI:MEMORY_BASIC_INFORMATION;
+    a:Byte;
+
+function Assign(Address:DWORD;Length:DWORD):DWORD;
+var NOBR:DWORD;  // NOBR = Number Of Bytes Read
+begin
+Result:=DWORD(VirtualAlloc(nil,Length,MEM_COMMIT,PAGE_EXECUTE_READWRITE));
+ReadProcessMemory(hProcess,Ptr(Address),Ptr(Result),Length,NOBR);
+end;
+
+begin
+hFile:=Assign(ImageBase,Size);
+// Your code here
+X:=PDWORD(hFile+RVA)^;
+IATRVA:=X;
+while IATRVA mod $1000<>0 do
+begin
+Dec(IATRVA);
+end;
+VirtualQueryEx(hProcess,Ptr(IATRVA),MBI,SizeOf(MBI));
+hf2:=Assign(IATRVA,MBI.RegionSize);
+Dec(X,IATRVA);
+a:=0;
+while (PWord(hf2+X+a)^<>$30FF) and (X+a<MBI.RegionSize) do
+begin
+Inc(a);
+end;
+if (X+a<MBI.RegionSize) and (PByte(hf2+X+a-1)^=$40) then
+begin
+Dec(a,5);
+Result:=PDWORD(hf2+(PDWORD(hf2+X+a)^-IATRVA)+1)^;
+VirtualFree(Ptr(hf2),0,MEM_RELEASE);
+end
+else
+begin
+Result:=0;
+end;
+// Code end
+VirtualFree(Ptr(hFile),0,MEM_RELEASE);
+end;
+
+exports Resolve;
+
+begin
+end.
