@@ -1,0 +1,42 @@
+# Nmap 7.80 scan initiated Sun Mar 22 19:39:53 2026 as: nmap -sC -sV -Pn -oN scan.txt 10.129.10.76
+Nmap scan report for 10.129.10.76
+Host is up (0.21s latency).
+Not shown: 988 filtered ports
+PORT     STATE SERVICE       VERSION
+53/tcp   open  domain?
+88/tcp   open  kerberos-sec  Microsoft Windows Kerberos (server time: 2026-03-22 11:40:51Z)
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+389/tcp  open  ldap          Microsoft Windows Active Directory LDAP (Domain: overwatch.htb0., Site: Default-First-Site-Name)
+445/tcp  open  microsoft-ds?
+464/tcp  open  kpasswd5?
+593/tcp  open  ncacn_http    Microsoft Windows RPC over HTTP 1.0
+636/tcp  open  tcpwrapped
+3268/tcp open  ldap          Microsoft Windows Active Directory LDAP (Domain: overwatch.htb0., Site: Default-First-Site-Name)
+3269/tcp open  tcpwrapped
+3389/tcp open  ms-wbt-server Microsoft Terminal Services
+| rdp-ntlm-info: 
+|   Target_Name: OVERWATCH
+|   NetBIOS_Domain_Name: OVERWATCH
+|   NetBIOS_Computer_Name: S200401
+|   DNS_Domain_Name: overwatch.htb
+|   DNS_Computer_Name: S200401.overwatch.htb
+|   DNS_Tree_Name: overwatch.htb
+|   Product_Version: 10.0.20348
+|_  System_Time: 2026-03-22T11:43:07+00:00
+| ssl-cert: Subject: commonName=S200401.overwatch.htb
+| Not valid before: 2025-12-07T15:16:06
+|_Not valid after:  2026-06-08T15:16:06
+|_ssl-date: 2026-03-22T11:43:46+00:00; +1s from scanner time.
+Service Info: Host: S200401; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled and required
+| smb2-time: 
+|   date: 2026-03-22T11:43:11
+|_  start_date: N/A
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Mar 22 19:45:47 2026 -- 1 IP address (1 host up) scanned in 353.58 seconds
