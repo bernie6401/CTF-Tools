@@ -14,3 +14,6 @@ Reverse/Disassembler/IDA Pro 7.7/plugins/patching/util/__pycache__/*
 Reverse/Disassembler/IDA Pro 7.7/plugins/retsync/__pycache__/*
 Reverse/Disassembler/IDA Pro 7.7/python/3/__pycache__/*
 Reverse/Disassembler/IDA Pro 7.7/python/3/PyQt5/__pycache__/*
+
+Reverse/Debugger/x96dbg/release/x32/db/*
+Reverse/Debugger/x96dbg/release/x64/db/*
